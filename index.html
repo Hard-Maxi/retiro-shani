@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retiro para mujeres NeuroOrgazmo · Academia Holística SHANI</title>
+<meta name="description" content="Retiro de 3 días para mujeres: prácticas NeuroCorporales, Ceremonia Imperial de Fuego, yoga, respiración y arte. Panamá, Colombia, Argentina y España 2027.">
+<!-- BORRADOR: quitar noindex en la versión final -->
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Retiro para mujeres NeuroOrgazmo">
+<meta property="og:description" content="Renacimiento a través del cuerpo, el fuego y el arte.">
+<meta property="og:image" content="img/hero-poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Questrial&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lino:#F3ECE4;      /* fondo, como en la presentación */
+  --arena:#E8DDD1;     /* fondo alterno */
+  --tierra:#37302B;    /* texto, como en la presentación */
+  --ceniza:#7A6A5E;    /* texto secundario */
+  --brasa:#9A3B26;     /* acento: botones */
+  --noche:#231C18;     /* sección de fechas */
+  --serif:"Merriweather",Georgia,serif;
+  --sans:"Questrial","Helvetica Neue",Arial,sans-serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--lino);color:var(--tierra);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brasa);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.2}
+h2{font-size:clamp(28px,4.6vw,44px);margin-bottom:24px}
+h3{font-size:21px}
+p+p{margin-top:14px}
+.muted{color:var(--ceniza)}
+section{padding:88px 0}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-size:16px;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:15px 30px;transition:background .2s,color .2s}
+/* Botones: vidrio líquido */
+.btn{position:relative;overflow:hidden;color:#fff;border:1px solid rgba(255,255,255,.38);-webkit-backdrop-filter:blur(16px) saturate(180%);backdrop-filter:blur(16px) saturate(180%);box-shadow:inset 0 1px 1px rgba(255,255,255,.7),inset 0 -2px 4px rgba(0,0,0,.18),inset 0 0 14px rgba(255,255,255,.14),0 10px 28px rgba(0,0,0,.28);transition:transform .2s,box-shadow .2s,background .2s}
+.btn::before{content:"";position:absolute;left:8%;right:8%;top:1px;height:48%;border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,0));pointer-events:none}
+.btn>*{position:relative}
+.btn:hover{transform:translateY(-1px);box-shadow:inset 0 1px 1px rgba(255,255,255,.85),inset 0 -2px 4px rgba(0,0,0,.18),inset 0 0 18px rgba(255,255,255,.2),0 14px 34px rgba(0,0,0,.32)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-brasa{background:linear-gradient(180deg,rgba(190,82,52,.72),rgba(128,42,24,.78))}
+.btn-linea{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.06))}
+.ico-wa{color:#25D366}
+.btn .ico-wa{width:20px;height:20px;color:#fff;filter:drop-shadow(0 0 1px rgba(0,0,0,.2))}
+.contactos .ico-wa{width:20px;height:20px;flex:none}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Formas de las fotos (como en la presentación): óvalo, paralelogramo, hexágono */
+.foto{overflow:hidden;background:var(--arena)}
+.foto img{width:100%;height:100%;object-fit:cover}
+.oval{border-radius:999px}
+.para{clip-path:polygon(14% 0,100% 0,86% 100%,0 100%)}
+.hexa{clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+
+/* Cabecera */
+header{position:absolute;top:0;left:0;right:0;z-index:5}
+header .wrap{display:flex;justify-content:flex-end;padding-top:22px}
+.logo{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-family:var(--serif);font-size:14px;line-height:1.3;text-align:right;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.logo img{width:130px;height:auto;filter:drop-shadow(0 1px 6px rgba(0,0,0,.35))}
+@media(min-width:760px){.logo img{width:170px}}
+
+/* Hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding:0}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,28,24,.15) 0%,rgba(35,28,24,.25) 45%,rgba(35,28,24,.78) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:12vh;width:100%}
+.hero h1{font-size:clamp(40px,8vw,92px);font-weight:300;letter-spacing:-.01em;max-width:11ch}
+.hero .sub{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(18px,2.4vw,24px);margin:18px 0 34px;max-width:34ch;opacity:.95}
+.hero .acciones{display:flex;flex-wrap:wrap;gap:12px}
+
+.hero .lugares{margin-top:22px;font-size:14px;opacity:.85}
+@media (prefers-reduced-motion:no-preference){
+  .hero .wrap>*{animation:subir 1.1s cubic-bezier(.2,.7,.2,1) both}
+  .hero .wrap>*:nth-child(2){animation-delay:.15s}
+  .hero .wrap>*:nth-child(3){animation-delay:.3s}
+  .hero .wrap>*:nth-child(4){animation-delay:.45s}
+  @keyframes subir{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
+
+/* Bloque 2 */
+.deseo{display:grid;gap:48px;align-items:center}
+.deseo .foto{aspect-ratio:3/4.2;max-width:420px;width:100%;margin:0 auto}
+.lista-deseo{list-style:none;margin:8px 0 36px}
+.lista-deseo li{font-family:var(--serif);font-weight:300;font-size:clamp(20px,2.6vw,26px);line-height:1.35;padding:14px 0;border-bottom:1px solid rgba(55,48,43,.15)}
+.lista-deseo li:first-child{border-top:1px solid rgba(55,48,43,.15)}
+.bienvenida h3{font-size:clamp(22px,3vw,28px);margin-bottom:16px}
+.cita{font-family:var(--serif);font-style:italic;font-weight:300;font-size:20px;margin-top:22px}
+@media(min-width:880px){.deseo{grid-template-columns:5fr 6fr;gap:80px}}
+
+/* Bloque 3 */
+.transformacion{background:var(--arena)}
+.transformacion .texto{max-width:680px}
+.tira{display:flex;margin-top:48px}
+.tira .foto{flex:1;aspect-ratio:3/4}
+.tira .foto+.foto{margin-left:-3.4%}
+.nota-foto{margin-top:64px;display:flex;gap:14px;align-items:flex-start;max-width:620px}
+.nota-foto svg{width:26px;height:26px;flex:none;margin-top:2px;color:var(--brasa)}
+
+/* Bloque 4 */
+.llevaras ul{list-style:none;display:grid;gap:0;max-width:880px}
+.llevaras li{display:grid;grid-template-columns:28px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid rgba(55,48,43,.15);font-size:18px}
+.llevaras li svg{width:22px;height:22px;color:var(--brasa);margin-top:3px}
+@media(min-width:880px){.llevaras ul{grid-template-columns:1fr 1fr;column-gap:56px}}
+
+/* Bloque 5: Programa */
+.programa{background:var(--arena)}
+.practicas{border-top:1px solid rgba(55,48,43,.2)}
+details.practica{border-bottom:1px solid rgba(55,48,43,.2)}
+details.practica summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 40px;gap:16px;align-items:center;padding:24px 0}
+details.practica summary::-webkit-details-marker{display:none}
+summary .titulo{font-family:var(--serif);font-size:clamp(19px,2.4vw,24px);line-height:1.3}
+summary .lema{display:block;font-family:var(--sans);font-size:15px;color:var(--ceniza);margin-top:4px}
+.mas{width:40px;height:40px;border-radius:50%;border:1px solid rgba(55,48,43,.35);position:relative;transition:transform .3s,background .3s}
+.mas::before,.mas::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:var(--tierra);transform:translate(-50%,-50%)}
+.mas::after{transform:translate(-50%,-50%) rotate(90deg);transition:opacity .3s}
+details[open] .mas{background:var(--tierra)}
+details[open] .mas::before{background:var(--lino)}
+details[open] .mas::after{opacity:0}
+.practica .cuerpo{display:grid;gap:28px;padding:4px 0 36px}
+.practica .cuerpo .foto{aspect-ratio:4/5;max-width:300px}
+.practica .cuerpo h4{font-family:var(--sans);font-weight:400;font-size:15px;color:var(--ceniza);margin:18px 0 8px}
+.practica .cuerpo ul{padding-left:20px}
+.practica .cuerpo li{margin:4px 0}
+@media(min-width:760px){.practica .cuerpo{grid-template-columns:260px 1fr;gap:44px;align-items:start}}
+
+/* Bloque 6: Guías */
+.guias-grid{display:grid;gap:64px}
+.guia .foto{aspect-ratio:3/4.3;max-width:340px}
+.guia h3{font-size:clamp(24px,3vw,30px);margin:26px 0 10px}
+.guia details{margin-top:14px}
+.guia summary{cursor:pointer;display:inline-flex;align-items:center;gap:8px;color:var(--brasa);list-style:none;font-size:16px}
+.guia summary::-webkit-details-marker{display:none}
+.guia summary::after{content:"+";font-size:20px;line-height:1}
+.guia details[open] summary::after{content:"–"}
+.guia details[open] summary .leer{display:none}
+.guia details:not([open]) summary .cerrar{display:none}
+.guia .bio{margin-top:14px}
+.guia .bio ul{list-style:none;margin-top:10px}
+.guia .bio li{margin:6px 0}
+.guia .redes{margin-top:16px;font-size:15px;display:flex;flex-wrap:wrap;gap:8px 20px}
+.guia .redes a{color:var(--ceniza)}
+@media(min-width:880px){.guias-grid{grid-template-columns:1fr 1fr;gap:80px}}
+
+/* Testimonios */
+.testimonios{background:var(--tierra);color:var(--lino);text-align:center}
+.testimonios p{max-width:560px;margin:0 auto 32px;color:#d9cdc1}
+
+
+/* Bloque 7: Incluye */
+.incluye-grid{display:grid;gap:44px;align-items:center}
+.incluye-grid .foto{aspect-ratio:3/4;max-width:380px;width:100%;margin:0 auto}
+.incluye ul{list-style:none}
+.incluye li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:12px 0;font-size:18px}
+.incluye li svg{width:20px;height:20px;color:var(--brasa);margin-top:4px}
+@media(min-width:880px){.incluye-grid{grid-template-columns:6fr 5fr;gap:80px}}
+
+/* Bloque 8: Fechas */
+.fechas{background:var(--noche);color:var(--lino)}
+.fechas h2{color:#fff}
+.fechas .intro{color:#cbbfb3;max-width:600px;margin-bottom:40px}
+.contador{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;border:1px solid rgba(243,236,228,.25);border-radius:14px;padding:16px 20px;margin-bottom:48px}
+.contador .num{font-family:var(--serif);font-size:26px;color:#fff}
+.contador .lbl{font-size:13px;color:#cbbfb3;margin-right:8px}
+.contador .txt{width:100%;font-size:15px;color:#e7d9cb}
+.region{margin-bottom:56px}
+.region-cab{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;border-bottom:1px solid rgba(243,236,228,.25);padding-bottom:14px;margin-bottom:6px}
+.region-cab h3{font-size:clamp(22px,3vw,28px);color:#fff}
+.precios{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:15px;color:#cbbfb3}
+.precios b{font-weight:400;color:#fff;font-family:var(--serif);font-size:20px}
+.precios s{opacity:.7}
+.fila{display:grid;grid-template-columns:1fr auto;gap:10px 18px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(243,236,228,.12)}
+.fila .lugar{font-family:var(--serif);font-size:20px;color:#fff}
+.fila .dias{color:#d9cdc1;font-size:16px}
+.fila .quedan{font-size:13px;color:#e2a98c;margin-top:2px}
+.fila .btn{padding:12px 22px;font-size:15px}
+@media(min-width:760px){
+  .fila{grid-template-columns:240px 1fr auto auto}
+  .fila .quedan{margin:0}
+}
+.condiciones{display:grid;gap:28px;margin-top:20px;color:#cbbfb3;font-size:15px}
+.condiciones h4{font-family:var(--sans);font-weight:400;color:#fff;font-size:16px;margin-bottom:6px}
+@media(min-width:760px){.condiciones{grid-template-columns:1fr 1fr 1fr}}
+
+/* Bloque 9 */
+.final{position:relative;color:#fff;text-align:center;padding:140px 0;overflow:hidden}
+.final>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.final::before{content:"";position:absolute;inset:0;background:rgba(35,28,24,.55)}
+.final .wrap{position:relative}
+.final h2{font-size:clamp(32px,6vw,60px);font-weight:300;max-width:16ch;margin:0 auto 34px}
+.contactos{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 22px;margin-top:34px;font-size:15px}
+.contactos a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:2px}
+
+footer{padding:34px 0 110px;font-size:14px;color:var(--ceniza)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+footer .logo-pie{width:180px}
+
+.redes a,.contactos a{display:inline-flex;align-items:center;gap:7px}
+.ico-ig{width:20px;height:20px;flex:none}
+.btn .ico-yt{width:22px;height:22px}
+/* WhatsApp flotante */
+.wa-flotante{position:fixed;right:18px;bottom:18px;z-index:20;display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;border-radius:999px;padding:14px;font-size:15px;overflow:hidden;background:linear-gradient(180deg,rgba(52,224,118,.78),rgba(22,170,80,.82));border:1px solid rgba(255,255,255,.45);-webkit-backdrop-filter:blur(16px) saturate(180%);backdrop-filter:blur(16px) saturate(180%);box-shadow:inset 0 1px 1px rgba(255,255,255,.8),inset 0 -2px 4px rgba(0,0,0,.18),0 10px 28px rgba(0,0,0,.3)}
+.wa-flotante::before{content:"";position:absolute;left:10%;right:10%;top:1px;height:48%;border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,0));pointer-events:none}
+.wa-flotante>*{position:relative}
+.wa-flotante .ico-wa{color:#fff}
+.wa-flotante{overflow:visible}
+.wa-flotante::after{content:"";position:absolute;inset:-1px;border-radius:999px;border:2px solid rgba(37,211,102,.7);opacity:0;pointer-events:none}
+@media (prefers-reduced-motion:no-preference){
+  .wa-flotante{animation:flotar 4s ease-in-out infinite}
+  .wa-flotante::after{animation:onda 4s ease-out infinite}
+  .wa-flotante:hover{animation-play-state:paused}
+  @keyframes flotar{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+  @keyframes onda{0%,55%{opacity:0;transform:scale(1)}60%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.45)}}
+}
+.wa-flotante svg{width:28px;height:28px}
+.wa-flotante span{display:none;padding-right:8px}
+@media(min-width:760px){.wa-flotante span{display:inline}}
+
+/* Borrador */
+.borrador{position:fixed;left:14px;bottom:18px;z-index:20;background:rgba(55,48,43,.88);color:#fff;font-size:12px;letter-spacing:.06em;padding:7px 12px;border-radius:999px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><radialGradient id="igGrad" gradientUnits="userSpaceOnUse" cx="6.4" cy="25.8" r="25.8"><stop offset="0" stop-color="#FFDD55"/><stop offset=".1" stop-color="#FFDD55"/><stop offset=".5" stop-color="#FF543E"/><stop offset="1" stop-color="#C837AB"/></radialGradient></defs></svg>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="img/logo-texto-blanco.png" alt="SHANI Academia Holística"></a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. Nombre -->
+<section class="hero">
+  <img class="poster" src="img/hero-poster.jpg" alt="">
+  <video id="heroVideo" muted playsinline loop preload="metadata" poster="img/hero-poster.jpg">
+    <source src="video/hero.mp4" type="video/mp4">
+  </video>
+  <div class="wrap">
+    <h1>Retiro para mujeres NeuroOrgazmo</h1>
+    <p class="sub">Renacimiento a través del cuerpo, el fuego y el arte</p>
+    <div class="acciones">
+      <a class="btn btn-brasa" href="#fechas">Ver fechas y precios</a>
+      <a class="btn btn-linea" href="#programa">Conocer el programa</a>
+    </div>
+    <p class="lugares">3 días · Panamá, Colombia, Argentina y España · 2027</p>
+  </div>
+</section>
+
+<!-- 2. Si deseas -->
+<section>
+  <div class="wrap deseo">
+    <div class="foto oval"><img src="img/bienvenida.jpg" alt="Mujer frente a las montañas" loading="lazy"></div>
+    <div>
+      <h2>Si deseas:</h2>
+      <ul class="lista-deseo">
+        <li>Volver a sentirte viva, deseante, segura</li>
+        <li>Reconectar con tu cuerpo y tu intuición</li>
+        <li>Soltar lo que ya no eres tú</li>
+        <li>Recordar quién eres, sin máscaras</li>
+      </ul>
+      <div class="bienvenida">
+        <h3>Bienvenida a un espacio creado solo para ti</h3>
+        <p>Imagina un lugar donde el tiempo se detiene. Donde tu cuerpo finalmente puede soltar, descansar y volver a sentir. Un lugar donde el calor del círculo femenino despierta en ti suavidad, claridad y fuerza.</p>
+        <p>Este retiro está diseñado para que regreses a tu esencia: a tu cuerpo, a tu respiración, a tu creatividad y a tu luz.</p>
+        <p class="cita">Aquí no existen obligaciones. Solo tú, tu energía y tu verdad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Transformación -->
+<section class="transformacion">
+  <div class="wrap">
+    <div class="texto">
+      <h2>Transformación que se siente, se vive y se ve</h2>
+      <p>Durante tres días vivirás una experiencia completa de reconexión femenina. A través de prácticas corporales, respiración consciente, meditación, yoga, arte y una Ceremonia de Fuego ancestral, entrarás en un proceso profundo de liberación, apertura y renovación.</p>
+      <p>Cada práctica está diseñada para guiarte más hacia adentro: primero el cuerpo se relaja, luego la respiración se expande… y desde ese estado, tu alma puede expresarse, sanar y renacer.</p>
+    </div>
+    <div class="tira">
+      <div class="foto para"><img src="img/circulo.jpg" alt="Círculo de mujeres sobre el césped" loading="lazy"></div>
+      <div class="foto para"><img src="img/ceremonia-noche.jpg" alt="Ceremonia de Fuego en grupo" loading="lazy"></div>
+      <div class="foto para"><img src="img/abrazo.jpg" alt="Mujeres abrazadas" loading="lazy"></div>
+    </div>
+    <div class="nota-foto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h3l2-3h8l2 3h3v11H3z"/><circle cx="12" cy="13" r="4"/></svg>
+      <p>Durante todo el retiro tendrás fotos y video que capturarán tu proceso de la forma más natural, estética y auténtica.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Qué te llevarás -->
+<section class="llevaras">
+  <div class="wrap">
+    <h2>¿Qué te llevarás?</h2>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Soltarás tensiones y bloqueos del cuerpo</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Regularás tu sistema nervioso y tu respiración</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Reconectarás con tu feminidad, belleza y deseo</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Liberarás emociones guardadas</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Obtendrás insights profundos sobre ti misma</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Te renovarás con la Ceremonia de Fuego</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Te llevarás fotos y videos profesionales</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5. Programa -->
+<section class="programa" id="programa">
+  <div class="wrap">
+    <h2>Programa</h2>
+    <div class="practicas">
+
+      <details class="practica">
+        <summary><span><span class="titulo">Prácticas NeuroCorporales (NeuroOrgazmo)</span><span class="lema">El cuerpo como centro y portal</span></span><span class="mas" aria-hidden="true"></span></summary>
+        <div class="cuerpo">
+          <div class="foto hexa"><img src="img/neurocorporal.jpg" alt="Práctica corporal guiada" loading="lazy"></div>
+          <div>
+            <h4>Sirve para:</h4>
+            <ul>
+              <li>liberar estrés físico y emocional</li>
+              <li>devolver sensibilidad a zonas “apagadas”</li>
+              <li>restaurar la conexión cuerpo–emoción</li>
+              <li>aprender a escuchar el cuerpo sin juicio</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details class="practica">
+        <summary><span><span class="titulo">Ceremonia Imperial de Fuego (práctica milenaria china)</span><span class="lema">El fuego como medicina y cierre</span></span><span class="mas" aria-hidden="true"></span></summary>
+        <div class="cuerpo">
+          <div class="foto hexa"><img src="img/fuego.jpg" alt="Ceremonia Imperial de Fuego" loading="lazy"></div>
+          <div>
+            <p>El fuego es un elemento de transformación real.</p>
+            <h4>Sirve para:</h4>
+            <ul>
+              <li>cerrar ciclos no resueltos</li>
+              <li>soltar cargas emocionales antiguas</li>
+              <li>transformar memorias que ya no sostienen</li>
+              <li>activar claridad y fuerza interna</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details class="practica">
+        <summary><span><span class="titulo">Yoga y respiración</span><span class="lema">El aliento como guía de la energía vital</span></span><span class="mas" aria-hidden="true"></span></summary>
+        <div class="cuerpo">
+          <div class="foto hexa"><img src="img/yoga.jpg" alt="Clase de yoga en grupo" loading="lazy"></div>
+          <div>
+            <h4>Sirve para:</h4>
+            <ul>
+              <li>ampliar la capacidad respiratoria</li>
+              <li>liberar tensión en pecho y abdomen</li>
+              <li>activar energía vital</li>
+              <li>calmar la mente sin forzarla</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details class="practica">
+        <summary><span><span class="titulo">Arte ritual y expresión creativa</span><span class="lema">La emoción transformada en creación</span></span><span class="mas" aria-hidden="true"></span></summary>
+        <div class="cuerpo">
+          <div class="foto hexa"><img src="img/arte.jpg" alt="Mujeres creando arte en círculo" loading="lazy"></div>
+          <div>
+            <h4>Sirve para:</h4>
+            <ul>
+              <li>liberar emociones bloqueadas</li>
+              <li>expresar sin palabras</li>
+              <li>desbloquear el canal creador</li>
+              <li>integrar experiencias vividas durante el retiro</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details class="practica">
+        <summary><span><span class="titulo">Rituales femeninos ancestrales</span><span class="lema">Volver a la naturaleza femenina</span></span><span class="mas" aria-hidden="true"></span></summary>
+        <div class="cuerpo">
+          <div class="foto hexa"><img src="img/rituales.jpg" alt="Ritual femenino en grupo" loading="lazy"></div>
+          <div>
+            <h4>Sirve para:</h4>
+            <ul>
+              <li>reconectar con la intuición</li>
+              <li>restaurar la confianza interna</li>
+              <li>armonizar ciclos físicos y emocionales</li>
+              <li>recordar la naturaleza femenina sin exigencia</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details class="practica">
+        <summary><span><span class="titulo">Fotografía: volver a mirarte</span><span class="lema">Disfrutar de verte desde otra mirada</span></span><span class="mas" aria-hidden="true"></span></summary>
+        <div class="cuerpo">
+          <div class="foto hexa"><img src="img/fotografia.jpg" alt="Retrato de mujer en la naturaleza" loading="lazy"></div>
+          <div>
+            <p>Durante el retiro también habrá un espacio para conectar con el cuerpo a través de la fotografía, acompañado por una fotógrafa especializada en fotografía femenina y corporal.</p>
+            <p>Un momento para jugar, moverse, explorar y sentirse cómoda frente a la cámara, sin necesidad de saber posar ni buscar la “foto perfecta”.</p>
+            <p>La idea es simplemente disfrutar de verte, expresarte y descubrirte desde otra mirada.</p>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- 6. Guías -->
+<section id="guias">
+  <div class="wrap">
+    <h2>Quién te guiará</h2>
+    <div class="guias-grid">
+      <article class="guia">
+        <div class="foto oval"><img src="img/ksenia.jpg" alt="Ksenia Nazarko" loading="lazy"></div>
+        <h3>Ksenia Nazarko</h3>
+        <p>Terapeuta psiconeuro-somática internacional, creadora del Método NeuroCorporal, Maestra del Imperial Masaje de Fuego y fundadora de la Academia Holística SHANI.</p>
+        <details>
+          <summary><span class="leer">Leer más</span><span class="cerrar">Cerrar</span></summary>
+          <div class="bio">
+            <p>Durante los últimos años ha formado a más de 800 especialistas en Latinoamérica, Estados Unidos y Europa, y sus sesiones individuales y programas educativos son altamente demandados en diferentes países del mundo.</p>
+            <p>El camino profesional de Ksenia comenzó en Rusia, donde obtuvo una sólida formación académica. Sin embargo, después de atravesar una fuerte crisis personal y emocional, emprendió un viaje de varios años por Asia y Latinoamérica en busca de respuestas a una pregunta fundamental: ¿cómo están realmente conectados el cuerpo, la mente y las emociones, y cómo puede una persona sanar de forma integral?</p>
+            <p>En ese recorrido se especializó en:</p>
+            <ul>
+              <li>🇷🇺 Rusia: psicología, somática y prácticas taoístas</li>
+              <li>🇮🇳 India: procesos corporales, trabajo subconsciente y meditación</li>
+              <li>🇹🇭 Tailandia: prácticas budistas y terapia somática</li>
+              <li>🇨🇳 China: técnicas energéticas y regulación corporal</li>
+            </ul>
+          </div>
+        </details>
+        <p class="redes"><a href="https://www.instagram.com/ksu.shani" target="_blank" rel="noopener"><svg class="ico-ig" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#igGrad)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>@ksu.shani</a></p>
+      </article>
+      <article class="guia">
+        <div class="foto oval"><img src="img/alesia.jpg" alt="Alesia Stupak" loading="lazy"></div>
+        <h3>Alesia Stupak</h3>
+        <p>Fotógrafa y profesora de yoga internacional, creadora de espacios de presencia, sensibilidad y transformación a través del cuerpo y la imagen.</p>
+        <details>
+          <summary><span class="leer">Leer más</span><span class="cerrar">Cerrar</span></summary>
+          <div class="bio">
+            <p>Durante los últimos años ha acompañado a personas en Latinoamérica y Europa, integrando fotografía consciente, movimiento y prácticas somáticas.</p>
+            <p>Su camino profesional comenzó en Bielorrusia, donde recibió una sólida formación en arte y comunicación, pero fue su proceso personal de búsqueda el que la llevó a vivir en Colombia y profundizar en yoga, meditación y presencia corporal.</p>
+            <p>Hoy, Alesia une su mirada artística con el trabajo consciente del cuerpo para guiar experiencias que ayudan a reconectar con autenticidad, calma interna y expresión verdadera.</p>
+          </div>
+        </details>
+        <p class="redes"><a href="https://www.instagram.com/aleyoga.co" target="_blank" rel="noopener"><svg class="ico-ig" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#igGrad)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>@aleyoga.co</a><a href="https://www.instagram.com/alesiasputnik" target="_blank" rel="noopener"><svg class="ico-ig" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#igGrad)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>@alesiasputnik</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios (aquí se insertarán 1–2 videos de YouTube) -->
+<section class="testimonios" id="testimonios">
+  <div class="wrap">
+    <h2>Lo que viven las mujeres en el retiro</h2>
+    <p>Escucha en sus propias palabras cómo vivieron el retiro las mujeres que ya pasaron por él.</p>
+    <a class="btn btn-linea" href="https://www.youtube.com/@ksu.shani_academia" target="_blank" rel="noopener">
+      <svg class="ico-yt" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FF0000" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8z"/><path fill="#fff" d="M9.7 15.1V8.9l5.8 3.1z"/></svg>
+      Ver testimonios en YouTube
+    </a>
+  </div>
+</section>
+
+<!-- 7. Incluye -->
+<section class="incluye">
+  <div class="wrap incluye-grid">
+    <div>
+      <h2>Incluye</h2>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Alojamiento: 3 días y 2 noches</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Alimentación completa</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Kit de bienvenida</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Todas las prácticas y materiales</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Acompañamiento de fotógrafa profesional durante todo el retiro</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Acompañamiento y cuidado durante todo el retiro</li>
+      </ul>
+    </div>
+    <div class="foto oval"><img src="img/alojamiento.jpg" alt="Terraza con vista a las montañas" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- 8. Fechas e inversión -->
+<section class="fechas" id="fechas">
+  <div class="wrap">
+    <h2>Fechas e inversión 2027</h2>
+    <p class="intro">Grupos de hasta 20 mujeres. Elige tu ciudad y reserva tu lugar por WhatsApp: te ayudaremos con el método de pago que te resulte más cómodo.</p>
+
+    <div class="contador" id="contador" hidden>
+      <span class="txt">El precio early bird termina el 31 de diciembre de 2026. Quedan:</span>
+      <span class="num" id="cd-d">0</span><span class="lbl">días</span>
+      <span class="num" id="cd-h">0</span><span class="lbl">horas</span>
+      <span class="num" id="cd-m">0</span><span class="lbl">min</span>
+    </div>
+
+    <div class="region">
+      <div class="region-cab">
+        <h3>Latinoamérica</h3>
+        <div class="precios">
+          <span class="eb">Early bird <b>800 USD</b></span>
+          <span>Precio regular <b class="reg">1.000 USD</b></span>
+          <span>Reserva con <b>200 USD</b></span>
+        </div>
+      </div>
+      <div id="filas-latam"></div>
+    </div>
+
+    <div class="region">
+      <div class="region-cab">
+        <h3>España</h3>
+        <div class="precios">
+          <span class="eb">Early bird <b>1.300 €</b></span>
+          <span>Precio regular <b class="reg">1.500 €</b></span>
+          <span>Reserva con <b>300 €</b></span>
+        </div>
+      </div>
+      <div id="filas-es"></div>
+    </div>
+
+    <div class="condiciones">
+      <div><h4>Early bird</h4><p>Precio especial si reservas tu lugar antes del 31 de diciembre de 2026.</p></div>
+      <div><h4>Formas de pago</h4><p>Transferencia bancaria, PayPal o criptomonedas.</p></div>
+      <div><h4>Cancelaciones</h4><p>Las cancelaciones con menos de 3 semanas de anticipación no son reembolsables.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Final y contactos -->
+<section class="final" id="contacto">
+  <img src="img/atardecer.jpg" alt="">
+  <div class="wrap">
+    <h2>Un viaje hacia tu esencia femenina</h2>
+    <a class="btn btn-brasa" href="https://wa.me/message/H4DV3MRCARXTG1" target="_blank" rel="noopener" data-wa>
+      <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Escríbenos por WhatsApp
+    </a>
+    <div class="contactos">
+      <a href="https://wa.me/message/H4DV3MRCARXTG1" target="_blank" rel="noopener" data-wa><svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>+52 55 9191 3244</a>
+      <a href="https://www.instagram.com/ksu.shani" target="_blank" rel="noopener"><svg class="ico-ig" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#igGrad)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>@ksu.shani</a>
+      <a href="https://www.instagram.com/aleyoga.co" target="_blank" rel="noopener"><svg class="ico-ig" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#igGrad)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>@aleyoga.co</a>
+      <a href="https://www.instagram.com/alesiasputnik" target="_blank" rel="noopener"><svg class="ico-ig" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#igGrad)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>@alesiasputnik</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="logo-pie" src="img/logo-texto.png" alt="SHANI Academia Holística">
+    <span>© 2026 Academia Holística SHANI</span>
+    <a href="politica.html">Política de privacidad</a>
+  </div>
+</footer>
+
+<a class="wa-flotante" href="https://wa.me/message/H4DV3MRCARXTG1" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" data-wa>
+  <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  <span>¿Tienes preguntas?</span>
+</a>
+
+<!-- BORRADOR: quitar en la versión final -->
+<div class="borrador">Borrador</div>
+
+<script>
+/* ===== Configuración: editar aquí fechas y lugares ===== */
+const WA_NUMERO = "525591913244";
+const EARLY_BIRD_FIN = new Date("2026-12-31T23:59:59-03:00");
+const RETIROS = [
+  {region:"latam", lugar:"Panamá",            dias:"19–21 de febrero",   quedan:20},
+  {region:"latam", lugar:"Bogotá, Colombia",  dias:"26–28 de febrero",   quedan:20},
+  {region:"latam", lugar:"Santa Marta, Colombia", dias:"5–7 de marzo",   quedan:20},
+  {region:"latam", lugar:"Panamá",            dias:"7–9 de mayo",        quedan:20},
+  {region:"latam", lugar:"Buenos Aires, Argentina", dias:"12–14 de noviembre", quedan:20},
+  {region:"es",    lugar:"España",            dias:"20–22 de agosto",    quedan:20},
+];
+/* ======================================================= */
+
+const waIcon = document.querySelector('.wa-flotante svg').outerHTML;
+function fila(r){
+  const texto = `Hola, quiero reservar mi lugar en el Retiro NeuroOrgazmo: ${r.lugar}, ${r.dias} de 2027.`;
+  const url = `https://wa.me/${WA_NUMERO}?text=${encodeURIComponent(texto)}`;
+  const quedan = r.quedan > 0 ? `Quedan ${r.quedan} lugares` : `Grupo completo`;
+  return `<div class="fila">
+    <div class="lugar">${r.lugar}</div>
+    <div><div class="dias">${r.dias} 2027</div></div>
+    <div class="quedan">${quedan}</div>
+    ${r.quedan > 0 ? `<a class="btn btn-brasa" href="${url}" target="_blank" rel="noopener" data-wa>${waIcon}Reservar</a>` : ``}
+  </div>`;
+}
+document.getElementById('filas-latam').innerHTML = RETIROS.filter(r=>r.region==="latam").map(fila).join('');
+document.getElementById('filas-es').innerHTML = RETIROS.filter(r=>r.region==="es").map(fila).join('');
+
+/* Contador early bird */
+const cd = document.getElementById('contador');
+function tick(){
+  const ms = EARLY_BIRD_FIN - new Date();
+  if (ms <= 0){
+    cd.hidden = true;
+    document.querySelectorAll('.eb').forEach(e=>e.hidden=true);
+    document.querySelector('.condiciones div').hidden = true;
+    return;
+  }
+  cd.hidden = false;
+  document.getElementById('cd-d').textContent = Math.floor(ms/864e5);
+  document.getElementById('cd-h').textContent = Math.floor(ms/36e5)%24;
+  document.getElementById('cd-m').textContent = Math.floor(ms/6e4)%60;
+}
+tick(); setInterval(tick, 30000);
+
+/* Video del inicio: no se reproduce si la persona prefiere menos movimiento */
+const v = document.getElementById('heroVideo');
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches){ v.play().catch(()=>{}); }
+
+/* Al abrir una práctica, cerrar las demás */
+document.querySelectorAll('details.practica').forEach(d=>{
+  d.addEventListener('toggle',()=>{ if(d.open) document.querySelectorAll('details.practica').forEach(o=>{ if(o!==d) o.open=false; }); });
+});
+
+/* Aquí se conectará el Meta Pixel (evento al hacer clic en WhatsApp) en la versión final */
+</script>
+</body>
+</html>
