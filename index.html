@@ -31,6 +31,11 @@ body{background:var(--lino);color:var(--tierra);font-family:var(--sans);font-siz
 img{display:block;max-width:100%}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--brasa);outline-offset:3px}
+/* Android: sin rectángulo de color al tocar */
+*{-webkit-tap-highlight-color:transparent}
+summary{-webkit-user-select:none;user-select:none}
+summary:focus:not(:focus-visible){outline:none}
+details.practica summary:active .mas{background:rgba(55,48,43,.12)}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.2}
 h2{font-size:clamp(28px,4.6vw,44px);margin-bottom:24px}
@@ -713,7 +718,7 @@ footer .logo-pie{width:180px}
 </a>
 
 <!-- BORRADOR: quitar en la versión final -->
-<div class="borrador">Borrador v54</div>
+<div class="borrador">Borrador v56</div>
 
 <script>
 /* ===== Configuración: editar aquí fechas y lugares ===== */
@@ -779,7 +784,19 @@ v.muted = true; v.play().catch(()=>{});
 
 /* Al abrir una práctica, cerrar las demás */
 document.querySelectorAll('details.practica').forEach(d=>{
-  d.addEventListener('toggle',()=>{ if(d.open) document.querySelectorAll('details.practica').forEach(o=>{ if(o!==d) o.open=false; }); });
+  const sm=d.querySelector('summary'); let antes=null;
+  sm.addEventListener('click',()=>{ antes=sm.getBoundingClientRect().top; });
+  d.addEventListener('toggle',()=>{
+    if(!d.open) return;
+    document.querySelectorAll('details.practica').forEach(o=>{ if(o!==d) o.open=false; });
+    /* mantener el título abierto en el mismo lugar de la pantalla */
+    requestAnimationFrame(()=>{
+      const ahora=sm.getBoundingClientRect().top;
+      if(antes!==null) window.scrollBy(0, ahora-antes);
+      else if(ahora<0) window.scrollBy(0, ahora-80);
+      antes=null;
+    });
+  });
 });
 
 
