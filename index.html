@@ -734,20 +734,21 @@ footer .logo-pie{width:180px}
 </a>
 
 <!-- BORRADOR: quitar en la versión final -->
-<div class="borrador">Borrador v65</div>
+<div class="borrador">Borrador v66</div>
 
 <script>
 /* ===== Configuración: editar aquí fechas y lugares ===== */
 const WA_NUMERO = "525591913244";
 const EARLY_BIRD_FIN = new Date("2026-12-31T23:59:59-03:00");
 const RETIROS = [
-  {region:"latam", lugar:"Panamá",            dias:"19–21 de febrero",   quedan:12},
-  {region:"latam", lugar:"Bogotá, Colombia",  dias:"26–28 de febrero",   quedan:14},
-  {region:"latam", lugar:"Santa Marta, Colombia", dias:"5–7 de marzo",   quedan:15},
-  {region:"latam", lugar:"Panamá",            dias:"7–9 de mayo",        quedan:13},
-  {region:"latam", lugar:"Buenos Aires, Argentina", dias:"12–14 de noviembre", quedan:18},
-  {region:"es",    lugar:"España",            dias:"20–22 de agosto",    quedan:17},
+  {region:"latam", lugar:"Panamá",            dias:"19–21 de febrero",   quedan:12, inicio:"2027-02-19", fin:"2027-02-21", ciudad:"",            pais:"PA"},
+  {region:"latam", lugar:"Bogotá, Colombia",  dias:"26–28 de febrero",   quedan:14, inicio:"2027-02-26", fin:"2027-02-28", ciudad:"Bogotá",      pais:"CO"},
+  {region:"latam", lugar:"Santa Marta, Colombia", dias:"5–7 de marzo",   quedan:15, inicio:"2027-03-05", fin:"2027-03-07", ciudad:"Santa Marta", pais:"CO"},
+  {region:"latam", lugar:"Panamá",            dias:"7–9 de mayo",        quedan:13, inicio:"2027-05-07", fin:"2027-05-09", ciudad:"",            pais:"PA"},
+  {region:"latam", lugar:"Buenos Aires, Argentina", dias:"12–14 de noviembre", quedan:18, inicio:"2027-11-12", fin:"2027-11-14", ciudad:"Buenos Aires", pais:"AR"},
+  {region:"es",    lugar:"España",            dias:"20–22 de agosto",    quedan:17, inicio:"2027-08-20", fin:"2027-08-22", ciudad:"",            pais:"ES"},
 ];
+const PRECIOS = { latam:{moneda:"USD", early:800, regular:1000}, es:{moneda:"EUR", early:1300, regular:1500} };
 /* ======================================================= */
 
 const waIcon = document.querySelector('.wa-flotante svg').outerHTML;
@@ -865,6 +866,35 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches){
   const fix=()=>{h.style.paddingTop=sp.offsetHeight+'px'};
   fix(); addEventListener('resize',fix); addEventListener('load',fix);
   if(document.fonts) document.fonts.ready.then(fix);
+})();
+
+
+/* Datos estructurados para Google (schema.org Event): se generan de RETIROS */
+(function(){
+  const base=location.origin+location.pathname.replace(/[^/]*$/,'');
+  const eventos=RETIROS.map(r=>{
+    const pr=PRECIOS[r.region];
+    const texto=`Hola, quiero reservar mi lugar en el Retiro NeuroOrgazmo: ${r.lugar}, ${r.dias} de 2027.`;
+    const reservar=`https://wa.me/${WA_NUMERO}?text=${encodeURIComponent(texto)}`;
+    const dir={"@type":"PostalAddress","addressCountry":r.pais}; if(r.ciudad) dir.addressLocality=r.ciudad;
+    return {"@context":"https://schema.org","@type":"Event",
+      "name":`Retiro para mujeres NeuroOrgazmo · ${r.lugar}`,
+      "description":"Retiro de 3 días para mujeres: prácticas NeuroCorporales, Ceremonia Imperial de Fuego, yoga, respiración, arte ritual y fotografía.",
+      "startDate":r.inicio,"endDate":r.fin,
+      "eventStatus":"https://schema.org/EventScheduled",
+      "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+      "location":{"@type":"Place","name":r.lugar,"address":dir},
+      "image":[base+"img/hero-poster.jpg"],
+      "url":base+"#fechas",
+      "organizer":{"@type":"Organization","name":"Academia Holística SHANI","url":base},
+      "performer":[{"@type":"Person","name":"Ksenia Nazarko"},{"@type":"Person","name":"Alesia Stupak"}],
+      "maximumAttendeeCapacity":20,"remainingAttendeeCapacity":r.quedan,
+      "offers":[
+        {"@type":"Offer","name":"Early bird","price":pr.early,"priceCurrency":pr.moneda,"validThrough":"2026-12-31T23:59:59-03:00","availability":r.quedan>0?"https://schema.org/InStock":"https://schema.org/SoldOut","url":reservar},
+        {"@type":"Offer","name":"Precio regular","price":pr.regular,"priceCurrency":pr.moneda,"validFrom":"2027-01-01","availability":r.quedan>0?"https://schema.org/InStock":"https://schema.org/SoldOut","url":reservar}
+      ]};
+  });
+  const sc=document.createElement('script'); sc.type='application/ld+json'; sc.textContent=JSON.stringify(eventos); document.head.appendChild(sc);
 })();
 
 /* Aquí se conectará el Meta Pixel (evento al hacer clic en WhatsApp) en la versión final */
