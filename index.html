@@ -90,8 +90,14 @@ header .wrap{display:flex;justify-content:flex-end;padding-top:22px}
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding:0}
 .hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,28,24,.32) 0%,rgba(35,28,24,.04) 22%,rgba(35,28,24,.1) 50%,rgba(35,28,24,.55) 100%)}
-.hero .wrap{position:relative;z-index:2;padding-bottom:12vh;width:100%}
-.hero h1{text-shadow:0 2px 18px rgba(30,22,16,.45);font-size:clamp(38px,7vw,84px);font-weight:300;letter-spacing:-.01em;line-height:1.02;max-width:14ch}
+.hero .wrap{position:relative;z-index:2;padding-top:96px;padding-bottom:12vh;width:100%}
+@media(max-height:700px){
+  .hero h1{font-size:32px}
+  .hero .sub{margin:16px 0 24px}
+  .hero .acciones .btn{padding:12px 26px}
+  .hero .wrap{padding-bottom:8vh}
+}
+.hero h1{text-shadow:0 2px 18px rgba(30,22,16,.45);font-size:clamp(38px,min(7vw,7.5svh),84px);font-weight:300;letter-spacing:-.01em;line-height:1.02;max-width:14ch}
 .hero .estirado{display:inline-block;transform:scaleY(2);transform-origin:left bottom}
 .hero .sub{text-shadow:0 1px 12px rgba(30,22,16,.45);font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(18px,4.6vw,34px);line-height:1.35;margin:22px 0 34px;opacity:.95}
 .hero .acciones{display:flex;flex-wrap:wrap;gap:12px}
@@ -707,7 +713,7 @@ footer .logo-pie{width:180px}
 </a>
 
 <!-- BORRADOR: quitar en la versión final -->
-<div class="borrador">Borrador v53</div>
+<div class="borrador">Borrador v54</div>
 
 <script>
 /* ===== Configuración: editar aquí fechas y lugares ===== */
@@ -817,6 +823,16 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches){
     f.addEventListener('pointerleave',()=>{f.classList.remove('activa');['--rx','--ry'].forEach(k=>f.style.setProperty(k,'0deg'));f.style.setProperty('--go',0);});
   });
 }
+
+
+/* Título estirado: reservar arriba el espacio que ocupa al estirarse (scaleY 2) */
+(function(){
+  const h=document.querySelector('.hero h1'), sp=h&&h.querySelector('.estirado');
+  if(!sp) return;
+  const fix=()=>{h.style.paddingTop=sp.offsetHeight+'px'};
+  fix(); addEventListener('resize',fix); addEventListener('load',fix);
+  if(document.fonts) document.fonts.ready.then(fix);
+})();
 
 /* Aquí se conectará el Meta Pixel (evento al hacer clic en WhatsApp) en la versión final */
 </script>
