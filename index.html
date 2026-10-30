@@ -209,14 +209,15 @@ details[open] .mas::after{opacity:0}
 .fechas{background:var(--noche);color:var(--lino)}
 .fechas h2{color:#fff}
 .fechas .intro{color:#cbbfb3;max-width:600px;margin-bottom:40px}
-.contador{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;border:1px solid rgba(243,236,228,.25);border-radius:14px;padding:16px 20px;margin-bottom:48px}
+.contador{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:8px 8px;border:1px solid rgba(243,236,228,.25);border-radius:14px;padding:16px 20px;margin-bottom:48px}
 .contador .num{font-family:var(--serif);font-size:26px;color:#fff}
-.contador .lbl{font-size:13px;color:#cbbfb3;margin-right:8px}
-.contador .txt{width:100%;font-size:15px;color:#e7d9cb}
+.contador .lbl{font-size:13px;color:#cbbfb3;margin-right:22px}
+.contador .txt{width:100%;font-size:15px;color:#e7d9cb;margin-bottom:4px}
 .region{margin-bottom:56px}
 .region-cab{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;border-bottom:1px solid rgba(243,236,228,.25);padding-bottom:14px;margin-bottom:6px}
 .region-cab h3{font-size:clamp(22px,3vw,28px);color:#fff}
-.precios{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:15px;color:#cbbfb3}
+.precios{display:flex;flex-wrap:wrap;gap:10px 40px;font-size:15px;color:#cbbfb3}
+.precios>span{display:inline-flex;align-items:baseline;gap:10px}
 .precios b{font-weight:400;color:#fff;font-family:var(--serif);font-size:20px}
 .precios s{opacity:.7}
 .fila{display:grid;grid-template-columns:1fr auto;gap:10px 18px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(243,236,228,.12)}
@@ -664,9 +665,12 @@ footer .logo-pie{width:180px}
 <path d="M170.94,-40.0 L95.29,169.4 L177.16,170.06 Z" fill="url(#bVela)" opacity=".95"/>
 <image href="img/logo-texto.png" x="-1.15" y="-1.06" width="2.3" height="1.06" transform="matrix(16.482 0.898 0.651 21.037 145.68 115.26)" opacity=".88"/>
 <path d="M170.94,-40.0 L95.29,169.4" fill="none" stroke="rgba(255,205,140,.9)" stroke-width="1"/>
-<line x1="177.58" y1="184.02" x2="170.94" y2="-40.0" stroke="#140c08" stroke-width="2.3"/>
-<line x1="177.16" y1="170.06" x2="95.29" y2="169.4" stroke="#140c08" stroke-width="2.1" stroke-linecap="round"/>
-<path d="M170.94,-40.0 L156.02,-38.09 L171.25,-29.61 Z" fill="#140c08"/>
+<line x1="177.58" y1="184.02" x2="170.94" y2="-40.0" stroke="#5a3a22" stroke-width="2.6"/>
+<line x1="178.03" y1="184.02" x2="171.39" y2="-40.0" stroke="#a87a50" stroke-width=".8" opacity=".9"/>
+<line x1="177.16" y1="170.06" x2="95.29" y2="169.4" stroke="#5a3a22" stroke-width="2.3" stroke-linecap="round"/>
+<line x1="177.16" y1="169.56" x2="95.29" y2="168.9" stroke="#a87a50" stroke-width=".7" stroke-linecap="round" opacity=".9"/>
+<defs><linearGradient id="bBandera" gradientUnits="userSpaceOnUse" x1="171.09" y1="-34.80" x2="156.02" y2="-38.09"><stop offset="0" stop-color="#b3121a"/><stop offset=".5" stop-color="#ff3b30"/><stop offset="1" stop-color="#d3191f"/></linearGradient></defs>
+<path d="M170.94,-40.00 Q163.86,-40.80 156.02,-38.09 Q163.51,-33.26 171.25,-29.61 Z" fill="url(#bBandera)"><animate attributeName="d" dur="2.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.25;.5;.75;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M170.94,-40.00 Q163.86,-40.80 156.02,-38.09 Q163.51,-33.26 171.25,-29.61 Z;M170.94,-40.00 Q163.39,-38.65 156.28,-39.26 Q164.10,-36.00 171.25,-29.61 Z;M170.94,-40.00 Q163.68,-39.97 155.83,-37.21 Q163.22,-31.94 171.25,-29.61 Z;M170.94,-40.00 Q163.25,-37.97 156.19,-38.87 Q163.89,-35.02 171.25,-29.61 Z;M170.94,-40.00 Q163.86,-40.80 156.02,-38.09 Q163.51,-33.26 171.25,-29.61 Z"/></path>
 <path d="M121.33,201.37 L126.46,200.76 L131.3,200.14 L135.87,199.5 L140.21,198.86 L144.36,198.21 L148.32,197.56 L152.14,196.89 L155.83,196.22 L159.41,195.55 L162.9,194.87 L166.32,194.19 L169.67,193.5 L172.98,192.81 L176.24,192.12 L179.46,191.42 L182.66,190.72 L185.82,190.02 L188.95,189.31 L192.04,188.59 L195.1,187.88 L198.1,187.15 L201.05,186.43 L203.94,185.69 L206.74,184.95 L209.45,184.2 L212.05,183.44 L214.51,182.68 L216.83,181.91 L218.96,181.12 L220.9,180.33 L222.62,179.52 L224.08,178.7 L225.26,177.87 L226.13,177.03 L226.66,176.17 L226.81,175.3 L226.56,174.41 L225.86,173.51 L224.7,172.59 L223.02,171.66 L223.02,171.66 L216.13,172.35 L209.74,173.04 L203.81,173.74 L198.28,174.44 L193.11,175.14 L188.27,175.84 L183.72,176.54 L179.42,177.25 L175.34,177.95 L171.45,178.65 L167.73,179.36 L164.14,180.06 L160.66,180.76 L157.28,181.46 L153.96,182.16 L150.7,182.85 L147.47,183.54 L144.26,184.23 L141.06,184.92 L137.85,185.6 L134.63,186.27 L131.39,186.94 L128.12,187.61 L124.82,188.28 L121.49,188.94 L118.13,189.59 L114.75,190.24 L111.34,190.89 L107.91,191.54 L104.48,192.19 L101.04,192.83 L97.63,193.48 L94.25,194.13 L90.91,194.78 L87.64,195.43 L84.47,196.09 L81.41,196.76 L78.49,197.44 L75.74,198.14 L73.19,198.85 Z" fill="url(#bTeca)"/>
 <path d="M115.11,200.81 L119.9,200.19 L124.45,199.56 L128.8,198.92 L132.98,198.28 L136.99,197.63 L140.86,196.97 L144.61,196.31 L148.26,195.64 L151.82,194.98 L155.31,194.3 L158.73,193.62 L162.09,192.94 L165.41,192.26 L168.69,191.57 L171.94,190.88 L175.15,190.19 L178.33,189.49 L181.47,188.79 L184.59,188.08 L187.67,187.37 L190.7,186.65 L193.69,185.93 L196.62,185.21 L199.48,184.47 L202.26,183.73 L204.96,182.98 L207.54,182.23 L210.01,181.46 L212.34,180.69 L214.52,179.91 L216.52,179.12 L218.33,178.31 L219.92,177.5 L221.28,176.68 L222.37,175.84 L223.17,174.99 L223.67,174.13 L223.82,173.26" fill="none" stroke="rgba(30,16,8,.45)" stroke-width=".5"/>
 <path d="M105.89,200.33 L110.18,199.69 L114.32,199.04 L118.35,198.4 L122.27,197.75 L126.1,197.09 L129.83,196.44 L133.49,195.78 L137.08,195.12 L140.61,194.46 L144.08,193.79 L147.51,193.12 L150.89,192.45 L154.23,191.77 L157.53,191.09 L160.8,190.41 L164.04,189.72 L167.25,189.03 L170.43,188.34 L173.57,187.64 L176.68,186.93 L179.75,186.23 L182.79,185.51 L185.78,184.79 L188.73,184.07 L191.62,183.34 L194.46,182.6 L197.23,181.86 L199.92,181.11 L202.54,180.36 L205.06,179.59 L207.49,178.82 L209.81,178.04 L212.01,177.25 L214.07,176.45 L216.0,175.65 L217.76,174.83 L219.36,174.01 L220.78,173.17" fill="none" stroke="rgba(30,16,8,.45)" stroke-width=".5"/>
@@ -718,7 +722,7 @@ footer .logo-pie{width:180px}
 </a>
 
 <!-- BORRADOR: quitar en la versión final -->
-<div class="borrador">Borrador v56</div>
+<div class="borrador">Borrador v59</div>
 
 <script>
 /* ===== Configuración: editar aquí fechas y lugares ===== */
